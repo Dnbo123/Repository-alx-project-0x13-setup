@@ -1,3 +1,14 @@
 import * as React from "react";
 
-export interface ReactComponentProps { children: React.ReactNode }
+/**
+ * Generic props type for React components
+ * that accept children as a property
+ */
+export interface ReactComponentProps { 
+    /**
+     * The children of the component
+     */
+    children: React.ReactNode 
+}
+
+

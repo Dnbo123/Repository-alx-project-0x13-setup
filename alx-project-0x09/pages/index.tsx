@@ -49,6 +49,7 @@ const Home: React.FC = () => {
             onClick={handleGenerateImage}
             className="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
           >
+            
             {
               isLoading ? "Loading..." : "Generate Image"
             }
