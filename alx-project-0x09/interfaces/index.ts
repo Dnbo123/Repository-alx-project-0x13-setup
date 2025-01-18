@@ -13,8 +13,11 @@ export interface GeneratedImageProps {
     action: (imagePath: string) => void
 }
 
+<<<<<<< HEAD
 export type RequestProps = {
     prompt: string;
   }
 
+=======
+>>>>>>> c19b82e461ca22c41684063fff989be34d6f5a6d
 export type ImageProps = Pick<GeneratedImageProps, "imageUrl" | "prompt">

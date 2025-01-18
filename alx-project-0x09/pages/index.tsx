@@ -1,13 +1,27 @@
 import ImageCard from "@/components/common/ImageCard";
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import { ImageProps } from "@/interfaces";
+import { useState } from "react";
+
+
+>>>>>>> c19b82e461ca22c41684063fff989be34d6f5a6d
 
 const Home: React.FC = () => {
   const [prompt, setPrompt] = useState<string>("");
   const [imageUrl, setImageUrl] = useState<string>("");
+<<<<<<< HEAD
+=======
+  const [generatedImages, setGeneratedImages] = useState<ImageProps[]>(
+    []
+  );
+>>>>>>> c19b82e461ca22c41684063fff989be34d6f5a6d
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
 
   const handleGenerateImage = async () => {
+<<<<<<< HEAD
     setIsLoading(true);
     const resp = await fetch('/api/generate-image', {
       method: 'POST',
@@ -27,6 +41,10 @@ const Home: React.FC = () => {
 
     const data = await resp.json()
     setIsLoading(false)
+=======
+    console.log("Generating Image");
+    console.log(process.env.NEXT_PUBLIC_OPENAI_API_KEY);
+>>>>>>> c19b82e461ca22c41684063fff989be34d6f5a6d
   };
 
   return (
@@ -49,6 +67,7 @@ const Home: React.FC = () => {
             onClick={handleGenerateImage}
             className="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
           >
+<<<<<<< HEAD
             
             {
               isLoading ? "Loading..." : "Generate Image"
@@ -57,6 +76,16 @@ const Home: React.FC = () => {
         </div>
 
         {imageUrl && <ImageCard action={() => setImageUrl(imageUrl)} imageUrl={imageUrl} prompt={prompt} />}
+=======
+            {/* {
+              isLoading ? "Loading..." : "Generate Image"
+            } */}
+            Generate Image
+          </button>
+        </div>
+
+        {imageUrl && <ImageCard action={() => setImageUrl(imageUrl)} imageUrl={imageUrl} prompt={prompt} width={""} height={""} />}
+>>>>>>> c19b82e461ca22c41684063fff989be34d6f5a6d
       </div>
     </div>
   );
