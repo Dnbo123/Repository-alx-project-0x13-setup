@@ -36,6 +36,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
 
     return response.status(200).json({
       message: data?.generated_image || "https://via.placeholder.com/600x400?text=Generated+Image",
+
     });
   } catch (error) {
     console.error("Error in API route:", error);
@@ -43,4 +44,4 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
   }
 }
 
-export default handler
+export default handler;
