@@ -26,8 +26,8 @@ const useFetchData = <T, R>() => {
 
       const result = await resp.json()
       setResponseData(result)
-      setGeneratedImages((prev) => [...prev, { imageUrl: result?.message, prompt: body?.prompt }])
-        } catch (err) {
+      setGeneratedImages((prev) => [...prev, { imageUrl: result?.message, prompt: (body as any).prompt }])
+    } catch (err) {
       setError((err as Error).message)
     } finally {
       setIsLoading(false)
